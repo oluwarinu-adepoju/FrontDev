@@ -1,0 +1,25 @@
+/* src/components/Input/Input.module.css */
+.inputContainer {
+    margin-bottom: 1.5rem;
+}
+
+.input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus {
+    border-color: #3498DB;
+}
+
+.errorInput {
+    border-color: #E74C3C;
+}
+.errorMsg {
+    color: #E74C3C;
+    font-size: 0.8rem;
+}

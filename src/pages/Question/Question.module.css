@@ -1,0 +1,157 @@
+/* src/pages/Question/Question.module.css */
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #3498DB;
+    --accent-color: #E74C3E;
+    --dark: #1a1a1a;
+    --light: #ffffff;
+}
+    
+body {
+    background-color: var(--dark);
+    padding: 20px;
+}
+    
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--light);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+}
+    
+.mainContent {
+    flex: 1;
+}
+    
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+    
+.header h1 {
+    color: var(--primary-color);
+}
+    
+.subjectTabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+    
+.subjectTab {
+    padding: 10px 20px;
+    background: var(--light);
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--primary-color);
+}
+    
+.subjectTab:hover {
+    background: var(--secondary-color);
+    color: var(--light);
+}
+    
+.subjectTab.active {
+    background: var(--secondary-color);
+    color: var(--light);
+}
+    
+.timer {
+    font-size: 24px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    text-align: right;
+}
+    
+.questionContainer {
+    margin: 20px 0;
+}
+    
+.question {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+    
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 20px;
+}
+    
+.option {
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+    
+.option:hover {
+    background: var(--secondary-color);
+    color: var(--light);
+}
+    
+.option.selected {
+    background: var(--secondary-color);
+    color: var(--light);
+}
+    
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+}
+    
+.navButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.questionProgress {
+    background: var(--light);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+  
+.subjectGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+    margin-bottom: 20px;
+}
+    
+.questionBox {
+    width: 100%;
+    aspect-ratio: 1;
+    background: var(--secondary-color);
+    opacity: 0.5;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+    
+.questionBox.answered {
+    background: var(--accent-color);
+    opacity: 1;
+}
+    
+.subjectLabel {
+    font-weight: bold;
+    margin: 10px 0;
+    color: var(--primary-color);
+}

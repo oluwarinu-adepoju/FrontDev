@@ -1,0 +1,306 @@
+/* src/pages/About/About.module.css */
+:root {
+    --primary: #2C3E50;
+    --secondary: #3498DB;
+    --accent: #E74C3E;
+    --dark: #1a1a1a;
+    --light: #ffffff;
+    --gradient1: linear-gradient(135deg, #3498DB 0%, #2C3E50 100%);
+    --gradient2: linear-gradient(45deg, #E74C3C 0%, #3498DB 100%);
+}
+  
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--primary);
+    background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+}
+  
+.nav {
+    background: var(--light);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(52, 152, 219, 0.1);
+}
+  
+.navContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.navLogo img {
+    height: 70px; /* Increased from 50px for a larger logo */
+    width: auto;
+    vertical-align: middle;
+}
+  
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+  
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--secondary);
+    margin: 2px 0;
+    transition: all 0.3s ease;
+    display: block;
+}
+  
+.navLinks {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+  
+.navLinks a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+  
+.navLinks a:hover {
+    background: rgba(52, 152, 219, 0.1);
+    transform: translateY(-2px);
+}
+  
+.authButtons {
+    display: flex;
+    gap: 1rem;
+    margin-left: 2rem;
+}
+  
+.loginBtn {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--secondary);
+    border-radius: 20px;
+    color: var(--secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+  
+.loginBtn:hover {
+    background: var(--secondary);
+    color: var(--light);
+}
+  
+.signupBtn {
+    padding: 0.5rem 1.5rem;
+    background: var(--secondary);
+    border-radius: 20px;
+    color: var(--light);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+  
+.signupBtn:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+  
+.hero {
+    margin-top: 60px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/R.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 8rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+  
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to top, rgba(255,255,255,1), transparent);
+}
+  
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+  
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+  
+.founders {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+  
+.founderCard {
+    background: linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(44, 62, 80, 0.1);
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+}
+  
+.founderCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(52, 152, 219, 0.2);
+}
+  
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    background: var(--gradient2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+  
+.missionSection {
+    background: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+  
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+  
+.statCard {
+    background: var(--gradient1);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+}
+  
+.statCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+}
+  
+.ctaButton {
+    display: inline-block;
+    background: var(--gradient2);
+    color: white;
+    padding: 1.2rem 2.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+  
+.ctaButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+}
+  
+.impactSection {
+    margin: 4rem 0;
+}
+  
+#testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+  
+.testimonialCard {
+    background: linear-gradient(135deg, #ffffff 0%, #f5f7fa 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(44, 62, 80, 0.1);
+    transition: all 0.3s ease;
+}
+  
+.testimonialCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(52, 152, 219, 0.2);
+}
+  
+@media (max-width: 768px) {
+  .hamburger {
+      display: flex;
+    }
+  
+    .navLinks {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: var(--light);
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 2px 15px rgba(52, 152, 219, 0.1);
+    }
+  
+    .navLinks.active {
+        display: flex;
+    }
+  
+    .authButtons {
+      margin: 1rem 0;
+      flex-direction: column;
+      width: 100%;
+        gap: 0.5rem;
+    }
+  
+    .loginBtn, .signupBtn {
+        width: 100%;
+      text-align: center;
+    }
+  
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+      
+   .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
